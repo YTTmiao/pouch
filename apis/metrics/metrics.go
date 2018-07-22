@@ -7,6 +7,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
+
 func init() {
 	// Register prometheus metrics.
 	Register()
@@ -37,6 +38,7 @@ func Register() {
 		prometheus.MustRegister(ImagePullSummary)
 	})
 }
+
 
 // SinceInMicroseconds gets the time since the specified start in microseconds.
 func SinceInMicroseconds(start time.Time) float64 {
